@@ -1,0 +1,6 @@
+When you store a file in HDFS, the system breaks it down into a set of individual blocks and stores these blocks in various slave nodes in the Hadoop cluster. 
+This is an entirely normal thing to do, as all file systems break files down into blocks before storing them to disk.
+HDFS only wants to make sure that files are split into evenly sized blocks that match the predefined block size for the Hadoop instance (unless a custom value was entered for the file being stored). 
+Default block size is 128MB.(However it can be defined).
+The concept of storing a file as a collection of blocks is entirely consistent with how file systems normally work. 
+HDFS stores the files in contiguous blocks and hence it helps in quicker processing.
